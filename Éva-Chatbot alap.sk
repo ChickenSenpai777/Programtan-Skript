@@ -1,0 +1,27 @@
+#	   ____ /         
+#	  / __/  _____ _
+#	 / _/| |/ / _ `/
+#	/___/|___/\_,_/ 
+#---------------------
+#Sz. Marcell AKA. ChickenSenpai777       
+
+
+#Ez egy egyszerű skript.
+#Ha a játékos beszédje tartalmazza ezeket a mondat/okat akkor le futtat egy parancsot
+#A wait 0.1 seconds azért kell mert ha egy lassabb szerveren vagyunk képes a játékos mondata előtt írni.
+#Utána egy "broadcast" hogy mindenki lássa ha "message" akkor csak a játékos látja
+#És utána egy stop
+#Ennyi egy alap chatbot
+
+
+on chat:
+	if chat message contains "szia" , "éva":
+		wait 0.1 seconds
+		broadcast "&6[&3Éva&6] &rSzia!"
+		stop
+
+on chat:
+	if chat message contains "éva" , "írj" , "privátban":
+		wait 0.1 seconds
+		message "&6[&3Éva&6] &rNem %player%!"
+		stop
